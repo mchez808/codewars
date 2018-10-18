@@ -1,6 +1,7 @@
 import unittest
 
 from eight_kyu import pillars
+from eight_kyu import problem
 
 
 class PillarTestCase(unittest.TestCase):
@@ -13,12 +14,15 @@ class PillarTestCase(unittest.TestCase):
     def test_high(self):
         self.assertEqual(pillars(11, 15, 30), 15270)
 
-RightMeow = PillarTestCase()
-RightMeow.test_null()
-RightMeow.test_2000()
-RightMeow.test_high()
 
-# Test.describe("Basic Tests")
-# Test.assert_equals(pillars(1, 10, 10) , 0)
-# Test.assert_equals(pillars(2, 20, 25) , 2000)
-# Test.assert_equals(pillars(11, 15, 30) , 15270)
+class ProblemTestCase(unittest.TestCase):
+    def test_str(self):
+        self.assertEqual(problem("hello", "Error"))
+
+    def test_one(self):
+        self.assertEqual(problem(1), 56)
+
+
+# RightMeow = ProblemTestCase()
+# RightMeow.test_one()
+# RightMeow.test_str()

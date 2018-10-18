@@ -12,3 +12,9 @@ There are pillars near the road. The distance between the pillars is the same an
 Calculate the distance between the first and the last pillar in centimeters (without the width of the first and last pillar).
 
 (assertions also added)
+
+### [Super Duper Easy](https://www.codewars.com/kata/super-duper-easy/train/python)
+
+Make a function that returns the value multiplied by 50 and increased by 6.
+If the value entered is a string it should return "Error".
+
