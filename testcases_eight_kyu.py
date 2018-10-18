@@ -17,12 +17,12 @@ class PillarTestCase(unittest.TestCase):
 
 class ProblemTestCase(unittest.TestCase):
     def test_str(self):
-        self.assertEqual(problem("hello", "Error"))
+        self.assertEqual(problem("hello"), "Error")
 
     def test_one(self):
         self.assertEqual(problem(1), 56)
 
 
-# RightMeow = ProblemTestCase()
-# RightMeow.test_one()
-# RightMeow.test_str()
+RightMeow = ProblemTestCase()
+RightMeow.test_one()
+RightMeow.test_str()
