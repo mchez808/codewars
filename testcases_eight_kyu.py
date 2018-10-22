@@ -1,7 +1,19 @@
 import unittest
 
+from eight_kyu import invert
 from eight_kyu import pillars
 from eight_kyu import problem
+
+
+class InvertTestCase(unittest.TestCase):
+    def test_one(self):
+        self.assert_equals(invert([1,2,3,4,5]),[-1,-2,-3,-4,-5])
+        
+    def test_two(self):
+        self.assert_equals(invert([1,-2,3,-4,5]), [-1,2,-3,4,-5])
+    
+    def test_three(self):
+        self.assert_equals(invert([]), [])
 
 
 class PillarTestCase(unittest.TestCase):
@@ -23,6 +35,13 @@ class ProblemTestCase(unittest.TestCase):
         self.assertEqual(problem(1), 56)
 
 
-RightMeow = ProblemTestCase()
-RightMeow.test_one()
-RightMeow.test_str()
+# ========
+# Test execution
+ProblemTestCase.it("Testing ProblemTestCase")
+ProblemTestCase.test_one()
+ProblemTestCase.test_str()
+
+InvertTestCase.it("Invert values - Basic Tests")
+InvertTestCase.test_one()
+InvertTestCase.test_two()
+InvertTestCase.test_three()
