@@ -1,5 +1,22 @@
 # 8 kyu
 
+def invert(inputlist):
+    """Given a set of numbers, return the additive inverse of each. 
+    Each positive becomes negatives, and the negatives become positives.
+
+        invert([1,2,3,4,5]) == [-1,-2,-3,-4,-5]
+        invert([1,-2,3,-4,5]) == [-1,2,-3,4,-5]
+        invert([]) == []
+    You can assume that all values are integers. Do not mutate the input array/list.
+    
+    https://www.codewars.com/kata/invert-values/train/python
+    """
+    outputlist = []
+    for n in inputlist:
+        outputlist.append(-1*n)
+    return outputlist
+
+
 def problem(a):
     """Make a function that returns the value multiplied by 50 and increased by 6.
     If the value entered is a string it should return "Error".
