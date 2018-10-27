@@ -1,5 +1,24 @@
 # codewars
 
+## 7 kyu
+
+### [Alphabetical Sequence](https://www.codewars.com/kata/alphabetical-sequence/train/python)
+
+In this kata you will be given a random string of letters and tasked with
+returning them as a string of comma-separated sequences sorted alphabetcally,
+with each sequence starting with an uppercase character followed by n-1
+lowercase characters, where n is the letter's alphabet position 1-26.
+
+Example
+alpha_seq("ZpglnRqenU") -> "Eeeee,Ggggggg,Llllllllllll,Nnnnnnnnnnnnnn,Nnnnnnnnnnnnnn,Pppppppppppppppp,Qqqqqqqqqqqqqqqqq,Rrrrrrrrrrrrrrrrrr,Uuuuuuuuuuuuuuuuuuuuu,Zzzzzzzzzzzzzzzzzzzzzzzzzz"
+
+Technical Details:
+- The string will include only letters.
+- The first letter of each sequence is uppercase followed by n-1 lowercase.
+- Each sequence is seperated with a comma.
+- Return value needs to be a string.
+
+
 ## 8 kyu
 
 ### [Invert values](https://www.codewars.com/kata/invert-values/train/python)
@@ -28,4 +47,3 @@ Calculate the distance between the first and the last pillar in centimeters (wit
 
 Make a function that returns the value multiplied by 50 and increased by 6.
 If the value entered is a string it should return "Error".
-
