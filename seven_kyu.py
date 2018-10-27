@@ -9,9 +9,6 @@ def alpha_seq(string):
     Example
     alpha_seq("ZpglnRqenU") -> "Eeeee,Ggggggg,Llllllllllll,Nnnnnnnnnnnnnn,Nnnnnnnnnnnnnn,Pppppppppppppppp,Qqqqqqqqqqqqqqqqq,Rrrrrrrrrrrrrrrrrr,Uuuuuuuuuuuuuuuuuuuuu,Zzzzzzzzzzzzzzzzzzzzzzzzzz"
 
-    ___ alpha_seq('ZpglnRqenU')
-    'Eeeee,Ggggggg,Llllllllllll,Nnnnnnnnnnnnnn,Nnnnnnnnnnnnnn,Pppppppppppppppp,Qqqqqqqqqqqqqqqqq,Rrrrrrrrrrrrrrrrrr,Uuuuuuuuuuuuuuuuuuuuu,Zzzzzzzzzzzzzzzzzzzzzzzzzz'
-
     Technical Details:
     - The string will include only letters.
     - The first letter of each sequence is uppercase followed by n-1 lowercase.
@@ -22,30 +19,21 @@ def alpha_seq(string):
     >>> alpha_seq('A')
     'A'
 
-    >>> alpha_seq('a')
-    'A'
-
-    >>> alpha_seq('B')
-    'Bb'
-
-    >>> alpha_seq('bb')
-    'Bb,Bb'
-
-    >>> alpha_seq('Cbc')
-    'Ccc,Bb,Ccc'
-
     https://www.codewars.com/kata/alphabetical-sequence/train/python
     """
-    output_list_of_strings = []
+    list_str = []
+    list_str.extend(string)
+    list_str.sort()
+
+    list_str = ["A"]
     ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
-    for letter in string:
+    for letter in list_str:
         number_of_trailing_letters = ALPHABET.find(letter.upper())
-        # output_element example: "Eeeee"
-# import pdb; pdb.set_trace()
-        output_element = letter.upper() + letter.lower()*number_of_trailing_letters
-        output_list_of_strings.append(output_element)
-    output_string = ",".join(output_list_of_strings)
+        # str_same_letter example: "Eeeee"
+        str_same_letter = letter.upper() + letter.lower()*number_of_trailing_letters
+        list_str.append(str_same_letter)
+    output_string = ",".join(list_str)
     return output_string
 
 
@@ -55,3 +43,5 @@ if __name__ == '__main__':
     print("*"*20)
     import doctest
     doctest.testmod()
+
+print("chicken!")
