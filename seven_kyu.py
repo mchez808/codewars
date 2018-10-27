@@ -19,21 +19,35 @@ def alpha_seq(string):
     >>> alpha_seq('A')
     'A'
 
+    >>> alpha_seq('a')
+    'A'
+
+    >>> alpha_seq('B')
+    'Bb'
+
+    >>> alpha_seq('bb')
+    'Bb,Bb'
+
+    >>> alpha_seq('Cbc')
+    'Bb,Ccc,Ccc'
+
+    >>> alpha_seq('ZpglnRqenU')
+    'Eeeee,Ggggggg,Llllllllllll,Nnnnnnnnnnnnnn,Nnnnnnnnnnnnnn,Pppppppppppppppp,Qqqqqqqqqqqqqqqqq,Rrrrrrrrrrrrrrrrrr,Uuuuuuuuuuuuuuuuuuuuu,Zzzzzzzzzzzzzzzzzzzzzzzzzz'
+
     https://www.codewars.com/kata/alphabetical-sequence/train/python
     """
-    list_str = []
-    list_str.extend(string)
+    list_out, list_str = [], []
+    list_str.extend(string.upper())
     list_str.sort()
 
-    list_str = ["A"]
     ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
     for letter in list_str:
-        number_of_trailing_letters = ALPHABET.find(letter.upper())
+        number_of_trailing_letters = ALPHABET.find(letter)
         # str_same_letter example: "Eeeee"
         str_same_letter = letter.upper() + letter.lower()*number_of_trailing_letters
-        list_str.append(str_same_letter)
-    output_string = ",".join(list_str)
+        list_out.append(str_same_letter)
+    output_string = ",".join(list_out)
     return output_string
 
 
@@ -43,5 +57,3 @@ if __name__ == '__main__':
     print("*"*20)
     import doctest
     doctest.testmod()
-
-print("chicken!")
