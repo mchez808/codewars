@@ -1,14 +1,14 @@
 # 8 kyu
 
 def invert(inputlist):
-    """Given a set of numbers, return the additive inverse of each. 
+    """Given a set of numbers, return the additive inverse of each.
     Each positive becomes negatives, and the negatives become positives.
 
         invert([1,2,3,4,5]) == [-1,-2,-3,-4,-5]
         invert([1,-2,3,-4,5]) == [-1,2,-3,4,-5]
         invert([]) == []
     You can assume that all values are integers. Do not mutate the input array/list.
-    
+
     https://www.codewars.com/kata/invert-values/train/python
     """
     outputlist = []
@@ -44,3 +44,20 @@ def pillars(num_pill, dist, width):
         return 0
     return dist*100 * (num_pill - 1) + width * (num_pill - 2)
 
+
+def abbrevName(name):
+    """
+    Write a function to convert a name into initials.
+    This kata strictly takes two words with one space in between them.
+    The output should be two capital letters with a dot seperating them.
+    It should look like this:
+
+    >>> abbrevName("Sam Harris")
+    'S.H'
+
+    >>> abbrevName("Patrick Feeney")
+    'P.F'
+
+    https://www.codewars.com/kata/abbreviate-a-two-word-name/train/python
+    """
+    return ".".join([name.split()[0][0], name.split()[1][0]]).upper()
