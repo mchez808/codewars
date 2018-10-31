@@ -47,3 +47,15 @@ Calculate the distance between the first and the last pillar in centimeters (wit
 
 Make a function that returns the value multiplied by 50 and increased by 6.
 If the value entered is a string it should return "Error".
+
+
+### [Abbreviate a Two Word Name](https://www.codewars.com/kata/abbreviate-a-two-word-name/python)
+Write a function to convert a name into initials. This kata strictly takes two words with one space in between them.
+
+The output should be two capital letters with a dot seperating them.
+
+It should look like this:
+
+- Sam Harris => S.H
+
+- Patrick Feeney => P.F
