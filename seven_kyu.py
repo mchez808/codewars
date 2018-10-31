@@ -15,25 +15,6 @@ def alpha_seq(string):
     - Each sequence is seperated with a comma.
     - Return value needs to be a string.
 
-    # doctests
-    >>> alpha_seq('A')
-    'A'
-
-    >>> alpha_seq('a')
-    'A'
-
-    >>> alpha_seq('B')
-    'Bb'
-
-    >>> alpha_seq('bb')
-    'Bb,Bb'
-
-    >>> alpha_seq('Cbc')
-    'Bb,Ccc,Ccc'
-
-    >>> alpha_seq('ZpglnRqenU')
-    'Eeeee,Ggggggg,Llllllllllll,Nnnnnnnnnnnnnn,Nnnnnnnnnnnnnn,Pppppppppppppppp,Qqqqqqqqqqqqqqqqq,Rrrrrrrrrrrrrrrrrr,Uuuuuuuuuuuuuuuuuuuuu,Zzzzzzzzzzzzzzzzzzzzzzzzzz'
-
     https://www.codewars.com/kata/alphabetical-sequence/train/python
     """
     list_out, list_str = [], []
@@ -49,11 +30,3 @@ def alpha_seq(string):
         list_out.append(str_same_letter)
     output_string = ",".join(list_out)
     return output_string
-
-
-if __name__ == '__main__':
-    print("*"*20)
-    print("running doctest...")
-    print("*"*20)
-    import doctest
-    doctest.testmod()

@@ -1,6 +1,6 @@
 import unittest
 
-from alpha_sequence import alpha_seq
+from seven_kyu import alpha_seq
 
 
 class AlphaSeqTestCase(unittest.TestCase):
