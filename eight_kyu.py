@@ -51,8 +51,12 @@ def abbrevName(name):
     This kata strictly takes two words with one space in between them.
     The output should be two capital letters with a dot seperating them.
     It should look like this:
-    "Sam Harris"  =>  'S.H'
-    "Patrick Feeney"  =>  'P.F'
+
+    >>> abbrevName("Sam Harris")
+    'S.H'
+
+    >>> abbrevName("Patrick Feeney")
+    'P.F'
 
     https://www.codewars.com/kata/abbreviate-a-two-word-name/train/python
     """
