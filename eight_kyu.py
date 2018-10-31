@@ -53,12 +53,14 @@ def abbrevName(name):
     It should look like this:
 
     >>> abbrevName("Sam Harris")
-    "S.H"
+    'S.H'
 
     >>> abbrevName("Patrick Feeney")
-    "P.F"
+    'P.F'
 
     https://www.codewars.com/kata/abbreviate-a-two-word-name/train/python
     """
     #code away!
-    
+    # first, last = name.split()[0], name.split()[1]
+    # ".".join(first[0]
+    return ".".join([name.split()[0][0], name.split()[1][0]]).upper()
