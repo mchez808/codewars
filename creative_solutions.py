@@ -1,4 +1,12 @@
 
+## 6 kyu
+
+def reverse_alternate(s):
+  words = s.split()
+  words[1::2] = [word[::-1] for word in words[1::2]]
+  return ' '.join(words)
+
+
 """Given a set of numbers, return the additive inverse of each.
 Each positive becomes negatives, and the negatives become positives.
     invert([1,2,3,4,5]) == [-1,-2,-3,-4,-5]
@@ -11,7 +19,6 @@ https://www.codewars.com/kata/invert-values/train/python
 
 def invert(inputlist):
     return [-n for n in inputlist]
-
 
 
 def alpha_seq(string):

@@ -1,6 +1,6 @@
 import unittest
 
-from seven_kyu import alpha_seq, reverse_alternate
+from seven_kyu import alpha_seq
 
 
 class AlphaSeqTestCase(unittest.TestCase):
@@ -20,15 +20,5 @@ class AlphaSeqTestCase(unittest.TestCase):
                         )
 
 
-class reverseAlternateTestCase(unittest.TestCase):
-    def test_cases(self):
-        self.assertEqual(reverse_alternate("Did it work?"), "Did ti work?")
-        self.assertEqual(reverse_alternate("I really hope it works this time..."), "I yllaer hope ti works siht time...")
-        self.assertEqual(reverse_alternate("Reverse this string, please!"), "Reverse siht string, !esaelp")
-        self.assertEqual(reverse_alternate("Have a beer"), "Have a beer")
-        self.assertEqual(reverse_alternate(""), "")
-
-
 if __name__ == '__main__':
     unittest.main()
-    reverseAlternateTestCase()
