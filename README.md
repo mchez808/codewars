@@ -1,5 +1,16 @@
 # codewars
 
+
+## 6 kyu
+
+### [Reverse every other word in the string](https://www.codewars.com/kata/reverse-every-other-word-in-the-string/train/python)
+
+Reverse every other word in a given string, then return the string.
+Throw away any leading or trailing whitespace, while ensuring there is
+exactly one space between each word. Punctuation marks should be treated
+as if they are apart of the word in this kata.
+
+
 ## 7 kyu
 
 ### [Alphabetical Sequence](https://www.codewars.com/kata/alphabetical-sequence/train/python)

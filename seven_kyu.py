@@ -30,3 +30,27 @@ def alpha_seq(string):
         list_out.append(str_same_letter)
     output_string = ",".join(list_out)
     return output_string
+
+
+def binary_array_to_number(arr):
+    """
+    Given an array of one's and zero's convert the equivalent binary value to an integer.
+
+    Eg: [0, 0, 0, 1] is treated as 0001 which is the binary representation of 1.
+
+    Examples:
+        Testing: [0, 1, 0, 1] ==> 5
+        Testing: [1, 0, 0, 1] ==> 9
+        Testing: [1, 0, 0, 1, 0] ==> 34
+        Testing: [1, 0, 0, 0, 0, 0, 0, 0] ==>
+
+    However, the arrays can have varying lengths, not just limited to 4.
+
+    https://www.codewars.com/kata/ones-and-zeros/train/python
+    """
+    sum = 0
+
+    leading_decimal = len(arr)
+    for exponent_subtrahend, binary_digit in enumerate(arr):
+        sum += binary_digit * (2**(leading_decimal-exponent_subtrahend-1))
+    return sum
